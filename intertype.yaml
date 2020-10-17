@@ -1,0 +1,75 @@
+# Function arg
+# "[Params, 0] sort.Slice func(slice interface{}, less func(i int, j int) bool)":
+"[Params, 0] sort.Slice":
+  - check: {"IsSlice": true}
+
+# Function arg
+# "[Params, 1] context.WithValue func(parent context.Context, key interface{}, val interface{}) context.Context":
+"[Params, 1] context.WithValue":
+  - check: {"OneOf": ["string"]}
+
+# Function arg
+# "[Params, 2] context.WithValue func(parent context.Context, key interface{}, val interface{}) context.Context":
+"[Params, 2] context.WithValue":
+  - check: {"OneOf": ["float64"]}
+
+# Interface method arg
+# "[Params, 0] (context.Context).Value func(key interface{}) interface{}":
+"[Params, 0] (context.Context).Value":
+  - check: {"OneOf": ["string", "int"]}
+
+# Function arg
+# "[Params, 1] encoding/json.Unmarshal func(data []byte, v interface{}) error":
+"[Params, 1] encoding/json.Unmarshal":
+  - check: {"IsPointer": true}
+
+# Function arg
+# "[Params, 0] (*encoding/json.Decoder).Decode func(v interface{}) error":
+"[Params, 0] (*encoding/json.Decoder).Decode":
+  - check: {"IsPointer": true}
+
+# Struct field
+# "[] (go/ast.Object).Data interface{}":
+"[] (go/ast.Object).Data":
+  - check: {"IsSlice": true}
+
+# Map key
+# "[Key] github.com/siadat/intertype/testfiles.ExtMapWithInterfaceKey map[interface{}]string":
+"[Key] github.com/siadat/intertype/testfiles.ExtMapWithInterfaceKey":
+  - check: {"IsSlice": true}
+
+# Named interface{}
+# "[] github.com/siadat/intertype/testfiles.ExtXX interface{}":
+"[] github.com/siadat/intertype/testfiles.ExtXX":
+  - check: {"IsSlice": true}
+
+# Named interface{}
+# "[] github.com/siadat/intertype/testfiles.ExtYY interface{}":
+"[] github.com/siadat/intertype/testfiles.ExtYY":
+  - check: {"IsSlice": true}
+
+# Function arg
+# "[Returns, 0] github.com/siadat/intertype/testfiles.ReturnIntOrFloat func() interface{}":
+"[Returns, 0] github.com/siadat/intertype/testfiles.ReturnIntOrFloat":
+  - check: {"OneOf": ["float64", "int"]}
+
+# Function, whole
+# "[] github.com/siadat/intertype/testfiles.Sum func(a interface{}, b interface{}) interface{}":
+"[] github.com/siadat/intertype/testfiles.Sum":
+  - check: {"SameTypes": [["Params", 0], ["Params", 1]]}
+
+# TODO:
+
+# Type: Map: Elem
+# "[Elem] text/template.FuncMap map[string]interface{}":
+"[Elem] text/template.FuncMap":
+  - check: {"IsSlice": true}
+
+# "[Elem] html/template.FuncMap map[string]interface{}":
+"[Elem] html/template.FuncMap":
+  - check: {"IsSlice": true}
+
+# Function arg
+# "[Params, 0] encoding/json.Marshal func(v interface{}) ([]byte, error)":
+"[Params, 0] encoding/json.Marshal":
+  - check: {"Tags": ["json", "yaml"]}

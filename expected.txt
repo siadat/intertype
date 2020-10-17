@@ -1,0 +1,62 @@
+testfiles/test1.go:62:12: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:63:2: XX cannot contain dynamic type struct{}, allowed types: int, float64, string
+testfiles/test1.go:64:8: XX cannot contain dynamic type struct{}, allowed types: int, float64, string
+testfiles/test1.go:66:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:84:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:85:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:115:2: missing types [float64]
+testfiles/test1.go:124:2: impossible types [struct{}]
+testfiles/test1.go:134:6: XX cannot contain dynamic type interface{}, allowed types: int, float64, string
+testfiles/test1.go:146:6: XX cannot contain dynamic type interface{}, allowed types: int, float64, string
+testfiles/test1.go:147:13: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:150:6: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:153:2: XX cannot contain dynamic type struct{}, allowed types: int, float64, string
+testfiles/test1.go:157:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:171:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:179:2: XX cannot contain dynamic type struct{}, allowed types: int, float64, string
+testfiles/test1.go:200:2: missing fields [.Name string] in struct{Name_ string; Cache map[string]string}
+testfiles/test1.go:205:2: missing fields [.Cache map[string]string, .Name string] in struct{}
+testfiles/test1.go:228:2: expected a function, got int
+testfiles/test1.go:229:2: expected a function, got struct{}
+testfiles/test1.go:230:2: expected a function, got untyped nil
+testfiles/test1.go:231:2: expected a function, got strings.Builder
+testfiles/test1.go:233:2: expected a function, got int
+testfiles/test1.go:260:2: expected a slice, got int
+testfiles/test1.go:261:2: expected a slice, got struct{}
+testfiles/test1.go:262:2: expected a slice, got untyped nil
+testfiles/test1.go:263:2: expected a slice, got strings.Builder
+testfiles/test1.go:265:2: expected a slice, got func()
+testfiles/test1.go:289:2: expected a channel, got int
+testfiles/test1.go:290:2: expected a channel, got struct{}
+testfiles/test1.go:291:2: expected a channel, got untyped nil
+testfiles/test1.go:292:2: expected a channel, got strings.Builder
+testfiles/test1.go:294:2: expected a channel, got int
+testfiles/test1.go:316:6: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:325:6: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:327:8: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:328:8: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:332:19: interface{} cannot contain dynamic type int, allowed types: string
+testfiles/test1.go:332:19: interface{} cannot contain dynamic type int, allowed types: float64
+testfiles/test1.go:338:12: expected a slice, got int
+testfiles/test1.go:339:12: expected a slice, got float64
+testfiles/test1.go:341:16: expected a pointer, got int
+testfiles/test1.go:344:16: expected a pointer, got github.com/siadat/intertype/testfiles.S
+testfiles/test1.go:348:11: interface{} cannot contain dynamic type bool, allowed types: string, int
+testfiles/test1.go:351:29: expected a pointer, got int
+testfiles/test1.go:354:2: expected a slice, got float64
+testfiles/test1.go:356:6: expected a slice, got float64
+testfiles/test1.go:357:6: expected a slice, got float64
+testfiles/test1.go:360:30: expected a slice, got int
+testfiles/test1.go:361:4: expected a slice, got int
+testfiles/test1.go:362:8: expected a slice, got int
+testfiles/test1.go:368:2: expected a slice, got bool
+testfiles/test1.go:373:11: expected a slice, got bool
+testfiles/test1.go:380:2: expected a slice, got string
+testfiles/test1.go:381:2: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:388:3: interface{} cannot contain dynamic type string, allowed types: float64, int
+testfiles/test1.go:400:5: expected same types, got float64 != string
+testfiles/test1.go:411:14: missing tags ["json"] for field Field1, ["yaml"] for field Field2 of github.com/siadat/intertype/testfiles.myOutput
+testfiles/test1.go:426:2: TemplateFunction cannot contain dynamic type func() (string, error), allowed types: func(x string) string, func(x string) (string, error)
+testfiles/test1.go:434:12: XX cannot contain dynamic type bool, allowed types: int, float64, string
+testfiles/test1.go:442:6: Deprecated cannot contain dynamic type int, forbidden types: int, float64
+exit status 3
