@@ -160,6 +160,13 @@ But how about yaml.Unmarshal (gopkg.in/yaml.v2 package)? Easy:
   - check: {IsPointer: true}
 ```
 
+### Example (template.FuncMap)
+
+```yaml
+"[Elem] text/template.FuncMap":
+  - check: {"IsFunc": true}
+```
+
 ### Example (sort package)
 
 sort.Slice has an analyzer in Gopls that ensures that we only pass pointers to it.
