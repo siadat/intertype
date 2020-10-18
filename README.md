@@ -108,7 +108,7 @@ Because the library wants to allow us to pass any value we want.
 To make our system simpler,
 let's say you want to make sure that all keys we pass to context.WithValue
 are strings, and nothing else.
-We could annotate context.WithValue inside a intertype.yaml file inside our package:
+We could annotate context.WithValue inside a intertype.yaml file in our package:
 
 ```shell
 $ cat intertype.yaml
@@ -147,17 +147,17 @@ Easy:
 
 ```yaml
 "[Params, 0] encoding/json.Marshal":
-  - check: {"Tags": ["json", "yaml"]}
+  - check: {Tags: [json, yaml]}
 ```
 
 ### Example (yaml.Unmarshal)
 
-json.Unmarshal has an analyzer in Gopls that ensures that we only pass pointers to it.
-But how about yaml.Unmarshal? Easy:
+json.Unmarshal (encoding/json package) has an analyzer in Gopls that ensures that we only pass pointers to it.
+But how about yaml.Unmarshal (gopkg.in/yaml.v2 package)? Easy:
 
 ```yaml
 "[Params, 0] encoding/json.Marshal":
-  - check: {"Tags": ["json", "yaml"]}
+  - check: {IsPointer: true}
 ```
 
 ### Example (sort package)
