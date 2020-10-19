@@ -1,6 +1,31 @@
 # Intertype
 ### Type analysis for annotated empty interfaces
 
+### Gopls fork:
+
+To use Intertype inside your editor,
+install my fork of Gopls, which includes Intertype
+(I just added
+[one line](https://github.com/golang/tools/compare/master...siadat:add-intertype#diff-91fae02ed3b0b273b404df9a7d669137e9f40d9e26cda194ad4f2af930d2390eR986),
+other lines are added by go mod):
+
+```bash
+git clone -b add-intertype https://github.com/siadat/tools
+cd tools/
+go install .
+```
+
+Restart your editor. Your version of gopls in your bin directory should now be
+replaced with a new one, which includes Intertype.
+
+To revert back to the original Gopls without Intertype, just do this:
+
+```bash
+git checkout master
+cd tools/
+go install .
+```
+
 ### What is Intertype?
 
 - This is an experiment.
