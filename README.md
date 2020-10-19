@@ -156,7 +156,7 @@ json.Unmarshal (encoding/json package) has an analyzer in Gopls that ensures tha
 But how about yaml.Unmarshal (gopkg.in/yaml.v2 package)? Easy:
 
 ```yaml
-"[Params, 0] encoding/json.Marshal":
+"[Params, 1] gopkg.in/yaml.v2.Unmarshal":
   - check: {IsPointer: true}
 ```
 
