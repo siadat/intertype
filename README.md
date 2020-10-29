@@ -223,7 +223,7 @@ To revert back to the original Gopls without Intertype, just do this:
 
 ```bash
 git checkout master
-cd tools/
+cd tools/gopls
 go install .
 ```
 
