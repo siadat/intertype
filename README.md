@@ -1,6 +1,8 @@
 # Intertype
 ### Type analysis for annotated empty interfaces
 
+[![Build Status](https://travis-ci.com/siadat/intertype.svg?branch=master)](https://travis-ci.com/siadat/intertype)
+
 ### What is Intertype?
 
 - This is an experiment.
